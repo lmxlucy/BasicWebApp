@@ -16,18 +16,18 @@ public class QueryProcessorTest {
     }
 
     @Test
-    public void knowsAboutShakespeare() throws Exception {
-        assertThat(queryProcessor.process("Shakespeare"), containsString("playwright"));
+    public void knowsAboutLucy() throws Exception {
+        assertThat(queryProcessor.process("Lucy"), containsString("student"));
     }
 
     @Test
     public void isNotCaseSensitive() throws Exception {
-        assertThat(queryProcessor.process("shakespeare"), containsString("playwright"));
+        assertThat(queryProcessor.process("lucy"), containsString("student"));
     }
 
     @Test
-    public void knowsTeamName() throws Exception {
-        assertThat(queryProcessor.process("what is your name"), containsString("MyTeam"));
+    public void knows17313() throws Exception {
+        assertThat(queryProcessor.process("what is 17313"), containsString("course"));
     }
 
 }
